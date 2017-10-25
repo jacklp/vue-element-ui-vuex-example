@@ -19,8 +19,6 @@ Vue.component(Table.name, Table)
 Vue.component(TableColumn.name, TableColumn)
 Vue.component(DatePicker.name, DatePicker)
 
-
-
 new Vue({ //eslint-disable-line
     el: '#app',
     render: h => h(App),

@@ -18,6 +18,12 @@ export default new Vuex.Store({
     mutations: {
         saveForm(state, payload) {
             state.form = { ...payload.form }
+
+            // the table renders undefined if we pass it a javascript date so we must build a string for pretty print
+            const currDate = payload.form.date_of_birth.getDate()
+            const currMonth = payload.form.date_of_birth.getMonth() + 1 // Months are zero based
+            const currYear = payload.form.date_of_birth.getFullYear()
+            state.form.date_of_birth = currDate + '-' + currMonth + '-' + currYear
         }
     },
     actions: {

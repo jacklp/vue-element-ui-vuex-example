@@ -92,7 +92,6 @@ export default {
         const validateText = (rule, value, callback) => {
             const pattern = /[^A-Za-z]+/g
             if(pattern.test(value)) {
-                console.log('hey', pattern.test(value))
                 callback(new Error('Please input text only'))
             } else {
                 callback()
@@ -127,7 +126,7 @@ export default {
                     { type: 'email', message: 'Please input correct email address', trigger: 'blur' }
                 ],
                 age: [
-                    { type: 'number', message: 'age must be a number'}
+                    { type: 'number', message: 'age must be a number' }
                 ],
                 date_of_birth: [
                     { type: 'date', required: true, message: 'Please input date of birth', trigger: 'blur' }
@@ -145,12 +144,12 @@ export default {
     methods: {
         submitForm(formName) {
             this.$refs[formName].validate((valid) => {
-                if (valid) {
+                if(valid) {
                     this.show = true
                     this.$store.dispatch('saveForm', this.form)
                 } else {
                     console.log('error submit!!')
-                    return false;
+                    return false
                 }
             })
         },
