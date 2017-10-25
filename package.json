@@ -1,0 +1,63 @@
+{
+  "name": "clear-bank",
+  "description": "test for clearbank",
+  "version": "0.0.1",
+  "author": "Jack Prior <jackleonprior@gmail.com>",
+  "license": "MIT",
+  "main": "src/main.js",
+  "contributors": [
+    {
+      "name": "Jack Prior",
+      "email": "jack@boughtbymany.com"
+    }
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "lint": "eslint --ext .js,.vue src test/specs",
+    "linter": "npm run lint; exit 0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "element-ui": "^1.4.8",
+    "style-loader": "^0.19.0",
+    "vue": "^2.5.2",
+    "vue-i18n": "^7.3.2",
+    "vuex": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-env": "^2.4.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^6.4.1",
+    "babel-register": "^6.24.1",
+    "cross-env": "^3.0.0",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "file-loader": "^0.9.0",
+    "vue-loader": "^12.2.1",
+    "vue-template-compiler": "^2.3.4",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-decorators",
+      "transform-react-constant-elements",
+      "transform-react-inline-elements"
+    ]
+  }
+}
